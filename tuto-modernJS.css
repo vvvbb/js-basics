@@ -1,0 +1,7 @@
+.error{
+    border: 3px dashed crimson;
+}
+
+.success{
+    border: 3px dashed yellowgreen;
+}
