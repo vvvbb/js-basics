@@ -42,8 +42,11 @@ console.log(filtered_array);
 array = filtered_array;
 
 const body = document.querySelector("#name");
-array.forEach((person) => {
-  body.innerHTML += `<li class="border border-green-600">${person}</li>`;
+array.forEach((person, index) => {
+  body.innerHTML +=
+    `<li class="border border-yellow-600 bg-green-` +
+    index +
+    `00">${index}${person}</li>`;
 });
 
 const paras = document.querySelectorAll("#game p");
@@ -123,7 +126,7 @@ console.log(greeter); // */
 // Promise
 let prom = new Promise((resolve, reject) => {
   let RanVal = Math.round(Math.random());
-  // console.log("RanVal ",RanVal);
+  console.log("RanVal ", RanVal);
   if (RanVal) {
     resolve("success");
   } else {
@@ -131,11 +134,13 @@ let prom = new Promise((resolve, reject) => {
   }
 });
 
-prom.then((message) => {
-  console.log("this is in the then " + message);
-}).catch((message) => {
-  console.log("this is in the catch " + message);
-});
+prom
+  .then((message) => {
+    console.log("this is in the then " + message);
+  })
+  .catch((message) => {
+    console.log("this is in the catch " + message);
+  });
 
 /* 
 console.log("ENVENT LOOP");
@@ -166,3 +171,19 @@ for (i = lapin.length - 1; i >= 0; i--) {
   lapinRev += lapin[i];
 }
 console.log(lapinRev);
+
+var getMaxArr = [1, 2, 5, 3];
+var max = getMaxArr.reduce((a, b) => {
+  return Math.max(a, b);
+});
+console.log("🧶", max);
+
+//callback function
+const fOne = () => {
+  console.log("fOne");
+};
+const fTwo = (something) => {
+  something();
+  console.log("fTwo");
+};
+fTwo(fOne);
