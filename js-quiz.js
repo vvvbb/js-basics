@@ -21,8 +21,6 @@ console.log(convertToIntegers(["1", "82", "-13"]));
 console.log(convertToIntegers([]));
 // console.log(convertToIntegers(null));
 
-
-
 const closestToZero = (numbers) => {
   if (numbers == null || numbers.length < 1) {
     return 0;
@@ -41,6 +39,6 @@ var testCTZ1 = closestToZero([5, 7, 20, 4, 3, 11, 8, 5]);
 console.log("testCTZ1 : ", testCTZ1);
 var testCTZ2 = closestToZero(null);
 console.log("testCTZ2 : ", testCTZ2);
-var testCTZ3 = closestToZero([5, -7, 20, 4, -3,1 ,11, -8, 5]);
+var testCTZ3 = closestToZero([5, -7, 20, 4, -3, 1, 11, -8, 5]);
 console.log("testCTZ3 : ", testCTZ3);
 // TO BE CONTINUED...

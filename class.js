@@ -1,4 +1,5 @@
 // import "./class.css";
+// import "./class.css";
 
 class HelloWorldButton {
   render() {
@@ -8,7 +9,7 @@ class HelloWorldButton {
     button.onclick = function () {
       const p = document.createElement("p");
       p.innerHTML = "PPPPP";
-      p.classList.add("bg-yellow-500","text-center" );
+      p.classList.add("bg-yellow-500", "text-center", "mb-2");
       body.appendChild(p);
     };
     button.classList.add(
