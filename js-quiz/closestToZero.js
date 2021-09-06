@@ -1,3 +1,46 @@
+closestToZero = (numbers) => {
+  if (numbers == null || numbers.length < 1) {
+    return 0;
+  } else {
+    closestPos = Math.min(...numbers.filter((x) => x > 0));
+    closestNeg = Math.max(...numbers.filter((x) => x < 0));
+
+    var closest =
+      Math.abs(closestPos) > Math.abs(closestNeg) ? closestNeg : closestPos;
+
+    return closest;
+  }
+};
+
+console.log(closestToZero([-9, 8, 2, -5, 7])); //should be 2
+console.log(closestToZero()); //should be 0
+console.log(closestToZero([-3, -2, -1, 1, 2, 3])); //should be 1
+console.log(closestToZero([5, 7, 20, 4, 3, 11, 8, 5]));
+console.log(closestToZero([5, -7, 20, 4, -3, 11, -8, 5]));
+
+/* 
+closestToZero = (numbers) => {
+  if (numbers == null || numbers.length < 1) {
+    return 0;
+  } else {
+    var closest = Math.pow(2, 31) - 1; //2147483647;
+
+    for (i = 0; i < numbers.length; i++) {
+      // console.log(numbers[i]);
+      if (numbers[i] > 0 && Math.abs(closest) > Math.abs(numbers[i])) {
+        closest = numbers[i];
+      } else if (numbers[i] < 0 && Math.abs(closest) > Math.abs(numbers[i])) {
+        closest = numbers[i];
+      }
+    }
+
+    return closest;
+  }
+};
+
+ */
+
+/*
 const closestToZero = (numbers) => {
   if (numbers == null || numbers.length < 1) {
     return 0;
@@ -22,6 +65,7 @@ console.log("testCTZ2 : ", testCTZ2);
 var testCTZ3 = closestToZero([5, -7, 20, 4, -3, 1, 11, -8, 5]);
 console.log("testCTZ3 : ", testCTZ3);
 // TO BE CONTINUED...
+ */
 
 /* 
    function closestToZero(numbers) {

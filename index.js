@@ -70,8 +70,8 @@ console.log(adding);
 //FILTER METHODE
 const words = ["train", "boat", "plan", "bike", "trucks"];
 const short_words = words.filter((word) => word.length < 5);
-console.log("words : ",words);
-console.log("short_words : ",short_words);
+console.log("words : ", words);
+console.log("short_words : ", short_words);
 
 const family = [
   { name: "Jack", age: 26 },
@@ -80,5 +80,7 @@ const family = [
   { name: "Jenny", age: 2 },
 ];
 
-const family_list_filter = family.filter((item) => item.age > 18).map((item) => item.name);
+const family_list_filter = family
+  .filter((item) => item.age > 18)
+  .map((item) => item.name);
 console.log("list : ", family_list_filter);
