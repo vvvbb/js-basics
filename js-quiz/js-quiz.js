@@ -12,8 +12,8 @@ function miss(j) {
   return (j = 10);
 }
 miss(i);
-console.log(miss(30));
-console.log(i);
+console.log("return : ", miss(30));
+console.log("return : ", i);
 
 //
 
