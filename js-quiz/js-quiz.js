@@ -5,14 +5,14 @@ console.log(jsquiz);
 /*  */
 /*  */
 /*  */
-console.log("aaa");
+// console.log("aaa");
 
 var i = 3;
 function miss(j) {
-  return (j = 4);
+  return (j = 10);
 }
 miss(i);
-console.log(miss(3));
+console.log(miss(30));
 console.log(i);
 
 //
