@@ -84,3 +84,10 @@ const family_list_filter = family
   .filter((item) => item.age > 18)
   .map((item) => item.name);
 console.log("list : ", family_list_filter);
+
+//SORTED TWINS
+const sortMeOne = "Outlook";
+const sortMeTwo = "Lookout";
+const sortedOne = sortMeOne.toLowerCase().split("").sort().join("");
+const sortedTwo = sortMeTwo.toLowerCase().split("").sort().join("");
+console.log(sortedOne==sortedTwo ? true : false, "twins when sorted");
