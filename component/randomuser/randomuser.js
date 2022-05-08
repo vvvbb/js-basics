@@ -26,6 +26,7 @@ export default function randomuser() {
 
     var script = document.createElement('script');
     script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+    script.defer = true;
     document.getElementsByTagName('head')[0].appendChild(script);
 
     function defer(method) {
